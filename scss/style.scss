@@ -1,0 +1,498 @@
+
+@mixin rv_btn{
+    background-color: transparent;
+    border: 1px solid #666666;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    font-size: 17px;
+    text-transform: uppercase;
+    display: inline-block;
+    font-weight: 700;
+    margin-right: 10px;
+    color: #FFFFFF;
+    transition: 0.5s ease-out;
+    padding: 12px 28px;
+    &:hover{
+        color: #020208;
+    }
+    
+    &::after{
+        content: '';
+        display: block;
+        height: 100%;
+        width: 100%;
+        transform: skew(90deg) translate(-50%, -50%);
+        position: absolute;
+        inset: 50%;
+        left: 25%;
+        z-index: -1;
+        transition: .5s ease-out;
+        background-color: #DFE11B;        
+    }
+    &::before{
+        content: '';
+        display: block;
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        inset: 50%;
+        left: 25%;
+        z-index: -1;
+        transition: .5s ease-out;
+        background-color: #DFE11B;        
+        top: -50%;
+        left: -25%;
+        transform: skew(90deg) rotate(180deg) translate(-50%, -50%);
+    }
+    
+    &:hover::before{              
+        transform: skew(45deg) rotate(180deg) translate(-50%, -50%);      
+    }
+    &:hover::after{
+        transform: skew(45deg) translate(-50%, -50%);       
+    }
+}
+
+
+
+// defalt css
+a{
+    text-decoration: none;
+}
+ul{
+    list-style: none;
+}
+span{
+    display: inline-block;
+}
+img{
+    height: 100%;
+    width: 100%;
+    display: block;
+}
+
+
+
+
+
+
+// HOME-1 WORK SECTION
+.rv_work_main_area{
+    padding: 150px 0;
+    position: relative;
+    .rv_work_title_heading{
+        font-size: 50px;
+        font-weight: 600;
+        color: #050505;
+        max-width: 550px;
+        margin: auto;
+        text-align: center;
+        margin-bottom: 60px;
+    }
+
+    .rv_work_area {
+        width: 100%;
+        height: 570px;
+        position: relative;
+        .rv_work_iamge {
+            img{
+                display: block;
+                width: 80%;
+                height: 100%;
+            }
+        }
+        .rv_work_content_main{
+            position: absolute;
+            top: 53%;
+            right: 0;
+            transform: translateY(-50%);
+            height: 400px;
+            width: 300px;
+            .rv_work_content_area{
+                
+                .rv_work_content {
+                    text-align: left;
+                    background: #000;
+                    color: #fff;
+                    padding: 50px 30px;                 
+                    span{
+                        padding-bottom: 50px;
+                        display: inline-block;
+                        color: #D9D9D9;
+                    }
+                    .rv_work_content_title{
+                        padding-bottom: 50px;
+                        font-size: 24px;
+                        font-weight: 700;
+                        a{
+                            color: #FFFFFF;
+                            transition: 0.5s;
+                            &:hover{
+                                color: #F35B04;
+                            }
+                        }
+                    }
+                    .rv_work_content_btn{
+                        color: #fff;
+                        text-decoration: none;
+                        font-size: 18px;
+                        transition: 0.5s;
+                        &:hover{
+                            color: #F35B04;
+                            letter-spacing: 1.1px;
+                        }
+                    }
+                }
+                
+            }
+        }      
+    } 
+    .rv_work_button_area{
+        position: absolute;
+        left: 290px;
+        bottom: 100PX;
+        color: #050505;
+        .swiper-button-prev {
+            color: #050505;
+            width: 200px;
+            i{
+                margin: 0 15px;
+                color: #050505;
+            }
+            
+        }
+        ::after{
+            display: none;
+        }
+        .swiper-button-next{
+            color: #050505;
+            width: 200px;
+            i{
+                margin: 0 15px;
+                color: #050505;
+            }
+    
+        }
+        ::after{
+            display: none;
+        }
+    }
+      
+}
+
+// HOME-1 BRAND SECTION
+.rv_brand_main_area{
+    padding-bottom: 100px;
+    .rv_brand_area{       
+        display: grid;
+        text-align: center;
+        grid-template-columns: repeat(5, 1fr);
+        column-gap: 20px;
+        row-gap: 50px;
+        .rv_single_brand{
+            img {
+                width: 130px;
+                height: 72px;
+                margin: auto;
+                object-fit: contain;
+            }
+        }
+    }
+}
+
+// HOME-1 TESTIMONIAL SECTION
+.rv_testimonial_main_area{
+    position: relative;
+    z-index: 1;
+
+    .rv-testimonial-slider-container{
+        .rv_single_testimonial{
+            background: #F3F5FB;
+            padding: 80px;
+          .rv_testimonial_review{
+            padding-bottom: 40px;
+            a{
+                color: #FFB422;
+            }
+          } 
+          .rv_testimonial_desc{
+            color: #666666;
+            font-size: 20px;
+            font-weight: 500;
+            padding-bottom: 70px;
+            span{
+                background: #050505;
+                background: #666666;
+                color: #FFFFFF;
+            }
+          } 
+          .rv_testimonial_bottom{
+            border-top: 1px solid #66666647;
+            padding-top: 40px;
+            .rv_testimonial_author_name{
+                font-size: 26px;
+                font-weight: 600;
+                color: #666666;
+                a{
+                    color: #666666;
+                    transition: 0.5s;
+                    &:hover{
+                        color: #F35B04;
+                    }
+                }
+            }
+            .rv_testimonial_author_designation{
+                font-weight: 500;
+                color: #666666;
+    
+            }
+          }
+        }
+        .active.center{
+            .rv_testimonial_desc{
+                span{
+                    background: #050505;
+                    color: #FFFFFF;
+                }
+            }           
+            .rv_testimonial_author_name{               
+                color: #050505;
+            }
+        }
+    }
+    
+    button.owl-prev {
+        position: absolute;
+        top: 70px;
+        left: 313px;
+        // z-index: -1;
+        i{
+            border: 1px solid #C6C8D4;
+            padding: 12px 15px;
+            transition: 0.5s;
+            background: transparent;
+            font-size: 25px;
+            &:hover{
+                background: #F35B04;
+                color: #FFFFFF;
+                border: 1px solid transparent;
+            }
+        }
+    }
+    button.owl-next {
+        position: absolute;
+        bottom: 100px;
+        right: 315px;
+        // z-index: -1;
+        i{
+            border: 1px solid #C6C8D4;
+            padding: 12px 15px;
+            transition: 0.5s;
+            background: transparent;
+            font-size: 25px;
+            &:hover{
+                background: #F35B04;
+                color: #FFFFFF;
+                border: 1px solid transparent;
+            }
+        }
+    }
+    
+
+}
+
+// HOME-1 TEEM SECTION
+
+.rv_teem_main_area {
+    padding: 100px 0;
+  
+    .rv_teem_title_heading {
+      color: #050505;
+      font-size: 50px;
+      font-weight: 600;
+      padding-bottom: 70px;
+    }
+    .rv_teem_area{
+        position: relative;
+        .rv_single_teem {
+            border: 1px solid #C6C8D4;
+        
+                &:hover {
+                    background: #FFB422;         
+                }
+                &:hover .rv_teem_member_info_area .rv_teem_member_socials{          
+                    visibility: visible; 
+                    display: block;              
+                }
+                .rv_teem_member_info_area {
+                    display: flex;
+                    justify-content: space-between;
+                    padding: 30px; 
+                    .rv_teem_member_info {
+                        .rv_team_member_designation {
+                          font-weight: 500;
+                          color: #666666;
+                          padding-bottom: 7px;
+                          display: inline-block;
+                        }      
+                        .rv_team_member_name {                     
+                            font-size: 18px;
+                            font-weight: 700;
+                            margin: 0;
+                            a{
+                                color: #050505;
+                                transition: 0.5s;
+                                &:hover{
+                                    color: #F35B04;
+                                }
+                            }
+                        }
+                    }  
+                    .rv_teem_member_socials {
+                        align-self: flex-end;
+                        visibility: hidden;       
+                        a {
+                        margin-right: 10px;
+                        font-size: 20px;
+                        color: #F78C4F;
+                        transition: 0.5s;      
+                        &:hover {
+                        color: #FFFFFF;
+                        }
+                    }
+                }
+            }
+        }
+        button.owl-prev {
+            position: absolute;
+            right: 30px;
+            top: -121px;
+            i{
+                color: #C6C8D4;
+                font-size: 30px;
+                transition: 0.3s;
+                &:hover{
+                    color: #050505;
+                }
+            }
+        }
+        button.owl-next {
+            position: absolute;
+            right: 0;
+            top: -121px;
+            transition: 0.3s;
+            i{
+                color: #C6C8D4;
+                font-size: 30px;
+                &:hover{
+                    color: #050505;
+                }
+            }
+        }
+    }
+   
+}
+
+// HOME-1 BLOG SECTION
+.rv_blog_main_area{
+    padding: 50px 0;
+    background: #F3F5FB;
+   .rv_single_blog_area{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 20px;
+        
+        .rv_single_blog_image{
+            overflow: hidden;
+            width: 460px;
+            height: 360px;
+            img{
+                transition: 0.5s;
+                &:hover{
+                    transform: scale(1.1);
+                }
+            }
+        }
+        .rv_single_blog_content{
+
+            .rv_single_blog_meta{
+                display: flex;
+                align-items: center;
+                flex-wrap: wrap;
+                gap: 15px;
+                padding-bottom: 30px;
+                .rv_single_blog_meta_catagory{
+                    background: #F35B04;
+                    color: #FFFFFF;
+                    padding: 3px 12px;
+                    font-weight: 600;
+                }
+                span{
+                    color: #666666;
+                    font-weight: 500;
+                    i{
+                        color: #666666;
+                    }
+                }
+            }
+            .rv_single_blog_content_title{
+                font-size: 20px;
+                font-weight: 700;
+               
+                padding-bottom: 20px;
+                a{
+                    color: #050505;
+                    transition: 0.5s;
+                    &:hover{
+                        color: #F35B04;
+                    }
+                }
+            }
+            .rv_single_blog_content_desc{
+                color: #666666;
+                padding-bottom: 30px;
+            }
+            .rv_single_blog_content_btn{
+                color: #050505;
+                font-weight: 700;
+                transition: 0.5s;
+                i{
+                    padding-left: 5px;
+                }
+                &:hover{
+                    letter-spacing: 1.5px;
+                    color: #F35B04;
+                }
+            }
+        }
+    } 
+}
+
+
+// HOME-2 BANNER SECTION
+.rv_banner_section{
+    padding: 150px 0;
+    background: url(../images/home-2-banner-bg.png) no-repeat scroll center center / cover;
+    .rv_banner_content{
+        .rv_banner_content_heading{
+            color: #FFFFFF;
+            font-size: 70px;
+            font-weight: 700;
+            padding-bottom: 30px;
+            max-width: 650px;
+        }
+        .rv_banner_content_desc{
+            color: #FFFFFF;
+            opacity: 50%;
+            font-size: 18px;
+            font-weight: 500;
+            padding-bottom: 40px;
+        }
+        .rv_banner_content_btn{
+            @include rv_btn;
+
+        }
+    }
+}
