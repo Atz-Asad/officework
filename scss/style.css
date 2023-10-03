@@ -16,6 +16,11 @@ img {
   display: block;
 }
 
+h1, h2, h3, h4, h5, h6, p {
+  margin: 0;
+  padding: 0;
+}
+
 .rv_work_main_area {
   padding: 150px 0;
   position: relative;
@@ -370,25 +375,25 @@ img {
   color: #F35B04;
 }
 
-.rv_banner_section {
+.rv_2_banner_section {
   padding: 150px 0;
   background: url(../images/home-2-banner-bg.png) no-repeat scroll center center/cover;
 }
-.rv_banner_section .rv_banner_content .rv_banner_content_heading {
+.rv_2_banner_section .rv_2_banner_content .rv_2_banner_content_heading {
   color: #FFFFFF;
   font-size: 70px;
   font-weight: 700;
   padding-bottom: 30px;
   max-width: 650px;
 }
-.rv_banner_section .rv_banner_content .rv_banner_content_desc {
+.rv_2_banner_section .rv_2_banner_content .rv_2_banner_content_desc {
   color: #FFFFFF;
   opacity: 50%;
   font-size: 18px;
   font-weight: 500;
   padding-bottom: 40px;
 }
-.rv_banner_section .rv_banner_content .rv_banner_content_btn {
+.rv_2_banner_section .rv_2_banner_content .rv_2_banner_content_btn {
   background-color: transparent;
   border: 1px solid #666666;
   position: relative;
@@ -403,10 +408,10 @@ img {
   transition: 0.5s ease-out;
   padding: 12px 28px;
 }
-.rv_banner_section .rv_banner_content .rv_banner_content_btn:hover {
+.rv_2_banner_section .rv_2_banner_content .rv_2_banner_content_btn:hover {
   color: #020208;
 }
-.rv_banner_section .rv_banner_content .rv_banner_content_btn::after {
+.rv_2_banner_section .rv_2_banner_content .rv_2_banner_content_btn::after {
   content: "";
   display: block;
   height: 100%;
@@ -419,7 +424,7 @@ img {
   transition: 0.5s ease-out;
   background-color: #DFE11B;
 }
-.rv_banner_section .rv_banner_content .rv_banner_content_btn::before {
+.rv_2_banner_section .rv_2_banner_content .rv_2_banner_content_btn::before {
   content: "";
   display: block;
   height: 100%;
@@ -434,9 +439,138 @@ img {
   left: -25%;
   transform: skew(90deg) rotate(180deg) translate(-50%, -50%);
 }
-.rv_banner_section .rv_banner_content .rv_banner_content_btn:hover::before {
+.rv_2_banner_section .rv_2_banner_content .rv_2_banner_content_btn:hover::before {
   transform: skew(45deg) rotate(180deg) translate(-50%, -50%);
 }
-.rv_banner_section .rv_banner_content .rv_banner_content_btn:hover::after {
+.rv_2_banner_section .rv_2_banner_content .rv_2_banner_content_btn:hover::after {
   transform: skew(45deg) translate(-50%, -50%);
+}
+
+.rv_2_about_main_area {
+  padding: 100px 0;
+}
+.rv_2_about_main_area .rv_2_about_image_area {
+  position: relative;
+}
+.rv_2_about_main_area .rv_2_about_image_area img {
+  width: 400px;
+  height: 500px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.rv_2_about_main_area .rv_2_about_image_area img:nth-child(2) {
+  position: absolute;
+  content: "";
+  top: 100px;
+  left: 100px;
+}
+.rv_2_about_main_area .rv_2_about_content_area {
+  padding-top: 80px;
+}
+.rv_2_about_main_area .rv_2_about_content_area .rv_2_about_content_heading {
+  font-size: 44px;
+  font-weight: 800;
+  color: #020208;
+  padding-bottom: 50px;
+}
+.rv_2_about_main_area .rv_2_about_content_area .rv_2_about_content_item {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding-bottom: 40px;
+}
+.rv_2_about_main_area .rv_2_about_content_area .rv_2_about_content_item .rv_2_about_content_item_image img {
+  height: 60px;
+  width: 60px;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+.rv_2_about_main_area .rv_2_about_content_area .rv_2_about_content_item .rv_2_about_content_item_txt h4 {
+  font-size: 20px;
+  font-weight: 700;
+  color: #0B1728;
+  padding-bottom: 15px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.rv_2_about_main_area .rv_2_about_content_area .rv_2_about_content_item .rv_2_about_content_item_txt p {
+  color: #666666;
+  font-weight: 500;
+}
+
+.rv_2_service_main_area {
+  padding: 50px 0;
+}
+.rv_2_service_main_area .rv_2_service_section_title .rv_2_service_section_heading {
+  font-size: 44px;
+  color: #020208;
+  font-weight: 800;
+  padding-bottom: 70px;
+  max-width: 631px;
+  text-align: center;
+  margin: auto;
+}
+.rv_2_service_main_area .rv_2_single_services {
+  position: relative;
+  z-index: 2;
+}
+.rv_2_service_main_area .rv_2_single_services .rv_2_single_service_image {
+  position: relative;
+  z-index: 1;
+}
+.rv_2_service_main_area .rv_2_single_services .rv_2_single_service_image img {
+  height: 500px;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.rv_2_service_main_area .rv_2_single_services .rv_2_single_service_image::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  content: "";
+  background: rgb(0, 0, 0);
+  opacity: 0.7;
+}
+.rv_2_service_main_area .rv_2_single_services .rv_2_single_service_content {
+  position: absolute;
+  content: "";
+  top: 60px;
+  left: 40px;
+  z-index: 1;
+}
+.rv_2_service_main_area .rv_2_single_services .rv_2_single_service_content .rv_2_single_service_icon {
+  padding-bottom: 40px;
+}
+.rv_2_service_main_area .rv_2_single_services .rv_2_single_service_content .rv_2_single_service_icon img {
+  height: 70px;
+  width: 70px;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+.rv_2_service_main_area .rv_2_single_services .rv_2_single_service_content .rv_2_single_service_title {
+  color: #FFFFFF;
+  font-size: 34px;
+  font-weight: 700;
+  padding-bottom: 40px;
+  max-width: 250px;
+}
+.rv_2_service_main_area .rv_2_single_services .rv_2_single_service_content .sercive_btn {
+  background: transparent;
+  border: 1px solid rgba(102, 102, 102, 0.4);
+  height: 50px;
+  width: 50px;
+  display: inline-block;
+  border-radius: 50%;
+  color: #fff;
+  text-align: center;
+  line-height: 50px;
+  transition: 0.5s;
+}
+.rv_2_service_main_area .rv_2_single_services .rv_2_single_service_content .sercive_btn:hover {
+  background: #DFE11B;
+  border: 1px solid transparent;
+  color: #050505;
 }/*# sourceMappingURL=style.css.map */

@@ -71,6 +71,10 @@ img{
     width: 100%;
     display: block;
 }
+h1,h2,h3,h4,h5,h6,p{
+    margin: 0;
+    padding: 0;
+}
 
 
 
@@ -472,27 +476,177 @@ img{
 
 
 // HOME-2 BANNER SECTION
-.rv_banner_section{
+.rv_2_banner_section{
     padding: 150px 0;
     background: url(../images/home-2-banner-bg.png) no-repeat scroll center center / cover;
-    .rv_banner_content{
-        .rv_banner_content_heading{
+    .rv_2_banner_content{
+        .rv_2_banner_content_heading{
             color: #FFFFFF;
             font-size: 70px;
             font-weight: 700;
             padding-bottom: 30px;
             max-width: 650px;
         }
-        .rv_banner_content_desc{
+        .rv_2_banner_content_desc{
             color: #FFFFFF;
             opacity: 50%;
             font-size: 18px;
             font-weight: 500;
             padding-bottom: 40px;
         }
-        .rv_banner_content_btn{
+        .rv_2_banner_content_btn{
             @include rv_btn;
-
         }
     }
 }
+
+// HOME-2 ABOUT SECTION
+.rv_2_about_main_area{
+
+    padding: 100px 0;
+    .rv_2_about_image_area{
+        position: relative;
+
+        img{
+            width: 400px;
+            height: 500px;
+            object-fit: cover;
+        }
+        img:nth-child(2){        
+            position: absolute;
+            content: "";
+            top: 100px;
+            left: 100px;
+
+        }
+    }
+    .rv_2_about_content_area{
+        
+        padding-top: 80px;
+        .rv_2_about_content_heading{
+            font-size: 44px;
+            font-weight: 800;
+            color: #020208;
+            padding-bottom: 50px;
+        }
+        .rv_2_about_content_item{
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            padding-bottom: 40px;
+
+            .rv_2_about_content_item_image img {
+                height: 60px;
+                width: 60px;
+                object-fit: contain;
+            }
+            .rv_2_about_content_item_txt{
+                h4{
+                    font-size: 20px;
+                    font-weight: 700;
+                    color: #0B1728;
+                    padding-bottom: 15px;
+                    cursor: pointer;
+                    transition: 0.3s;
+                   
+                }
+                p{
+                    color: #666666;
+                    font-weight: 500;
+                }
+            }
+        }
+    }
+}
+
+// HOME-2 SERVICE SECTION
+.rv_2_service_main_area{
+
+    padding: 50px 0;
+    .rv_2_service_section_title{
+        .rv_2_service_section_heading{
+            font-size: 44px;
+            color: #020208;
+            font-weight: 800;
+            padding-bottom: 70px;
+            max-width: 631px;
+            text-align: center;
+            margin: auto;
+        }
+    }
+    .rv_2_single_services{
+        position: relative;
+        z-index: 2;
+
+        .rv_2_single_service_image{
+            position: relative;
+            z-index: 1;
+
+            img{
+                height: 500px;
+                width: 100%;
+                object-fit: cover;
+            }
+            &::before{
+                position: absolute;
+                top: 0;
+                left: 0;
+                height: 100%;
+                width: 100%;
+                content: "";
+                background: rgb(0, 0, 0.1);
+                opacity: 0.7;
+            }
+        }
+    
+        .rv_2_single_service_content{
+            position: absolute;          
+            content: "";
+            top: 60px;
+            left: 40px;
+            z-index: 1;
+
+
+
+            .rv_2_single_service_icon {
+                padding-bottom: 40px;
+    
+                img{
+                    height: 70px;
+                    width: 70px;
+                    object-fit: contain;
+                }
+            }
+            .rv_2_single_service_title{
+                color: #FFFFFF;
+                font-size: 34px;
+                font-weight: 700;
+                padding-bottom: 40px;
+                max-width: 250px;
+            }
+            
+            .sercive_btn {
+                background: transparent;
+                border: 1px solid #6666;
+                height: 50px;
+                width: 50px;
+                display: inline-block;
+                border-radius: 50%;
+                color: #fff;
+                text-align: center;
+                line-height: 50px;
+                transition: 0.5s;
+
+                &:hover{
+                    background: #DFE11B;
+                    border: 1px solid transparent;
+                    color: #050505;
+                }
+
+            }            
+                   
+        }            
+    }      
+}
+
+
