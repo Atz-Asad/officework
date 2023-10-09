@@ -494,8 +494,15 @@ h1,h2,h3,h4,h5,h6,p{
             font-weight: 500;
             padding-bottom: 40px;
         }
-        .rv_2_banner_content_btn{
+        .rv_4_banner_content_btn{
+            
             @include rv_btn;
+            &::after {
+                background-color: #1C74E9 !important;
+            }
+            &::before{
+                background-color: #1C74E9; 
+            }
         }
     }
 }
@@ -650,3 +657,138 @@ h1,h2,h3,h4,h5,h6,p{
 }
 
 
+
+// HOME-4 BANNER SECTION
+.rv_4_banner_main_area{
+   
+    .rv_4_banner_slider{
+        position: relative;
+        .rv_4_banner_single_slider{
+            z-index: 1;
+            position: relative;
+            padding: 100px 0;
+           
+            &::after{
+                position: absolute;
+                content: "";
+                top: 0;
+                left: 0;
+                height: 100%;
+                width: 100%;
+                background: rgb(0, 0, 0.1);
+                opacity: 0.8;
+                z-index: -1;
+            }
+            h1{
+                color: #FFFFFF;
+                font-size: 70px;
+                font-weight: 800;
+                position: relative;
+                z-index: 1;
+                span{
+                    position: absolute;
+                    right: 195px;
+                    top: 60px;
+                    z-index: -1;
+                }
+            }
+            p{
+                color: #666666;
+                font-size: 18px;
+                font-weight: 500;
+            }
+            .rv_4_banner_content_btn{
+                @include rv_btn;   
+            }
+
+            // progress css start
+            .progress{
+                width: 50px;
+                height: 50px;
+            }
+            .progress .track, .progress .fill{
+                fill: rgba(184, 224, 5, 0);
+                stroke-width: 3;
+                transform: rotate(90deg)translate(0px, -80px);
+            }
+            .progress .track{
+                stroke: #2A2A2A;
+            }
+            .progress .fill {
+                stroke: red;
+                stroke-dasharray: 219.99078369140625;
+                stroke-dashoffset: -219.99078369140625;
+                transition: stroke-dashoffset 1s;
+            }
+            
+            .progress.green .fill {
+                stroke: #1B9F17;
+            }
+            .progress .value, .progress{
+                fill: #FFFFFF;
+                text-anchor: middle;
+                font-size: 26px;
+            }
+            .progress, .progress-stacked{
+                --bs-progress-bg: none;
+            }
+            
+            // progress css end
+           
+            
+        }     
+        .rv_4_banner_slider_next {
+            position: absolute;
+            right: 200px;
+            bottom: 0;
+            z-index: 1;
+            width: 200px;
+            height: 150px;
+            padding: 40px 20px;
+            background: rgba(255,255,255, 0.2);
+
+            
+            p{
+                font-size: 16px;
+                font-weight: 700;
+                color: #FFFFFF;
+                padding: 15px 0;
+            }
+            i{
+                color: #FFFFFF;
+            }
+            .swiper-pagination{
+                position: absolute;
+                color: #c6c8d47d;
+                top: 15px;
+                left: 19px;
+                text-align: left;
+                font-size: 23px;
+                font-weight: 700;
+            }
+            
+        }
+        .rv_4_banner_slider_bottom_area{   
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            z-index: 1;
+            width: 200px;
+            height: 150px;                            
+        }
+    } 
+}
+
+
+
+
+// #wrapper{
+// 	position: relative;
+// 	top: 80px;
+// 	width: 404px;
+// }
+
+
+/*===== The CSS =====*/
+
+  
