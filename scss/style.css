@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600&display=swap");
 a {
   text-decoration: none;
 }
@@ -19,6 +20,10 @@ img {
 h1, h2, h3, h4, h5, h6, p {
   margin: 0;
   padding: 0;
+}
+
+body {
+  font-family: "Mulish", sans-serif;
 }
 
 .rv_work_main_area {
@@ -670,35 +675,6 @@ h1, h2, h3, h4, h5, h6, p {
 .rv_4_banner_main_area .rv_4_banner_slider .rv_4_banner_single_slider .rv_4_banner_content_btn:hover::after {
   transform: skew(45deg) translate(-50%, -50%);
 }
-.rv_4_banner_main_area .rv_4_banner_slider .rv_4_banner_single_slider .progress {
-  width: 50px;
-  height: 50px;
-}
-.rv_4_banner_main_area .rv_4_banner_slider .rv_4_banner_single_slider .progress .track, .rv_4_banner_main_area .rv_4_banner_slider .rv_4_banner_single_slider .progress .fill {
-  fill: rgba(184, 224, 5, 0);
-  stroke-width: 3;
-  transform: rotate(90deg) translate(0px, -80px);
-}
-.rv_4_banner_main_area .rv_4_banner_slider .rv_4_banner_single_slider .progress .track {
-  stroke: #2A2A2A;
-}
-.rv_4_banner_main_area .rv_4_banner_slider .rv_4_banner_single_slider .progress .fill {
-  stroke: red;
-  stroke-dasharray: 219.9907836914;
-  stroke-dashoffset: -219.9907836914;
-  transition: stroke-dashoffset 1s;
-}
-.rv_4_banner_main_area .rv_4_banner_slider .rv_4_banner_single_slider .progress.green .fill {
-  stroke: #1B9F17;
-}
-.rv_4_banner_main_area .rv_4_banner_slider .rv_4_banner_single_slider .progress .value, .rv_4_banner_main_area .rv_4_banner_slider .rv_4_banner_single_slider .progress {
-  fill: #FFFFFF;
-  text-anchor: middle;
-  font-size: 26px;
-}
-.rv_4_banner_main_area .rv_4_banner_slider .rv_4_banner_single_slider .progress, .rv_4_banner_main_area .rv_4_banner_slider .rv_4_banner_single_slider .progress-stacked {
-  --bs-progress-bg: none;
-}
 .rv_4_banner_main_area .rv_4_banner_slider .rv_4_banner_slider_next {
   position: absolute;
   right: 200px;
@@ -735,5 +711,147 @@ h1, h2, h3, h4, h5, h6, p {
   width: 200px;
   height: 150px;
 }
+.rv_4_banner_main_area .progress-one, .rv_4_banner_main_area .progress-two, .rv_4_banner_main_area .progress-three {
+  width: 100px;
+  height: 100px;
+}
+.rv_4_banner_main_area .progress {
+  display: none;
+}
+.rv_4_banner_main_area .progressbar-text {
+  font-size: 30px !important;
+}
 
-/*===== The CSS =====*//*# sourceMappingURL=style.css.map */
+.rv_4_about_main_area {
+  padding: 100px 0;
+  position: relative;
+}
+.rv_4_about_main_area .rv_4_car_img {
+  position: absolute;
+  right: 2%;
+  bottom: 10%;
+}
+.rv_4_about_main_area .rv_4_about_image {
+  position: relative;
+}
+.rv_4_about_main_area .rv_4_about_image img {
+  height: 650px;
+  width: 550px;
+  -o-object-fit: contain;
+  object-fit: contain;
+}
+.rv_4_about_main_area .rv_4_about_image img:nth-child(2) {
+  position: absolute;
+  content: "";
+  width: 250px;
+  height: 300px;
+  bottom: 60px;
+  right: 12%;
+  -o-object-fit: contain;
+  object-fit: contain;
+}
+.rv_4_about_main_area .rv_4_about_content .rv_4_about_content_heading {
+  color: #142137;
+  font-size: 48px;
+  font-weight: 800;
+  position: relative;
+  padding-bottom: 30px;
+}
+.rv_4_about_main_area .rv_4_about_content .rv_4_about_content_heading span {
+  position: absolute;
+  right: 23%;
+  top: 50px;
+  z-index: -1;
+}
+.rv_4_about_main_area .rv_4_about_content .rv_4_about_content_desc {
+  color: rgba(20, 33, 55, 0.8);
+  font-size: 18px;
+  font-weight: 500;
+  padding-bottom: 30px;
+}
+.rv_4_about_main_area .rv_4_about_content .rv_4_about_list_item {
+  padding-bottom: 40px;
+  display: flex;
+  -moz-column-gap: 20px;
+       column-gap: 20px;
+}
+.rv_4_about_main_area .rv_4_about_content .rv_4_about_list_item .rv_4_about_list_number > span {
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  background: #C6C8D4;
+  color: #142137;
+  text-align: center;
+  line-height: 50px;
+  font-size: 18px;
+  font-weight: 700;
+}
+.rv_4_about_main_area .rv_4_about_content .rv_4_about_list_item .rv_4_about_list_content h4 {
+  color: #142137;
+  font-size: 20px;
+  font-weight: 700;
+  transition: 0.3s;
+  cursor: pointer;
+  padding-bottom: 10px;
+}
+.rv_4_about_main_area .rv_4_about_content .rv_4_about_list_item .rv_4_about_list_content h4:hover {
+  color: #1C74E9;
+}
+.rv_4_about_main_area .rv_4_about_content .rv_4_about_list_item .rv_4_about_list_content p {
+  color: rgba(20, 33, 55, 0.7);
+  font-weight: 500;
+  font-size: 16px;
+}
+.rv_4_about_main_area .rv_4_about_content .rv_4_about_btn {
+  background-color: transparent;
+  border: 1px solid #666666;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  font-size: 17px;
+  text-transform: uppercase;
+  display: inline-block;
+  font-weight: 700;
+  margin-right: 10px;
+  color: #FFFFFF;
+  transition: 0.5s ease-out;
+  padding: 12px 28px;
+  color: #142137;
+}
+.rv_4_about_main_area .rv_4_about_content .rv_4_about_btn:hover {
+  color: #020208;
+}
+.rv_4_about_main_area .rv_4_about_content .rv_4_about_btn::after {
+  content: "";
+  display: block;
+  height: 100%;
+  width: 100%;
+  transform: skew(90deg) translate(-50%, -50%);
+  position: absolute;
+  inset: 50%;
+  left: 25%;
+  z-index: -1;
+  transition: 0.5s ease-out;
+  background-color: #DFE11B;
+}
+.rv_4_about_main_area .rv_4_about_content .rv_4_about_btn::before {
+  content: "";
+  display: block;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  inset: 50%;
+  left: 25%;
+  z-index: -1;
+  transition: 0.5s ease-out;
+  background-color: #DFE11B;
+  top: -50%;
+  left: -25%;
+  transform: skew(90deg) rotate(180deg) translate(-50%, -50%);
+}
+.rv_4_about_main_area .rv_4_about_content .rv_4_about_btn:hover::before {
+  transform: skew(45deg) rotate(180deg) translate(-50%, -50%);
+}
+.rv_4_about_main_area .rv_4_about_content .rv_4_about_btn:hover::after {
+  transform: skew(45deg) translate(-50%, -50%);
+}/*# sourceMappingURL=style.css.map */

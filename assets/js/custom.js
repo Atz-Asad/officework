@@ -42,7 +42,7 @@ var swiper2 = new Swiper(".rv_work_area", {
   },
 });
   
-//  home 4 banner section
+// home4 banner section
 var swiper = new Swiper(".rv_4_banner_slider_bottom_area", {
   spaceBetween: 10,
   slidesPerView: 1,
@@ -50,16 +50,17 @@ var swiper = new Swiper(".rv_4_banner_slider_bottom_area", {
   loop: true,
   watchSlidesProgress: true,
 });
+
 var swiper2 = new Swiper(".rv_4_banner_slider", {
   spaceBetween: 10,
   loop: true,
   pagination: {
     el: '.swiper-pagination',
-    type: 'custom', // Use custom pagination rendering
+    type: 'custom',
     renderCustom: function (swiper, current, total) {
-      // Add a "0" prefix if the current page number is less than 10
-      var pageNumber = current < 9 ? '0' + (current + 1) : (current + 1);
-      return pageNumber; // Display the formatted page number
+      // Calculate the current page number with a "0" prefix
+      var pageNumber = (current).toString().padStart(2, '0');
+      return pageNumber;
     },
   },
   navigation: {
@@ -70,21 +71,115 @@ var swiper2 = new Swiper(".rv_4_banner_slider", {
   },
 });
 
-// home-4 progess start
-var forEach = function (array, callback, scope) {
-	for (var i = 0; i < array.length; i++) {
-		callback.call(scope, i, array[i]);
-	}
-};
-// window.onload = function(){
-	
-// }
-var max = -219.99078369140625;
-forEach(document.querySelectorAll('.progress'), function (index, value) {
-percent = value.getAttribute('data-progress');
-  value.querySelector('.fill').setAttribute('style', 'stroke-dashoffset: ' + ((100 - percent) / 100) * max);
-  // value.querySelector('.value').innerHTML = percent + '';
+
+// end home 4 bannersection
+
+
+
+// Define the value you want to animate to
+var valueToAnimate = 6.8;
+// Scale the value to be between 0 and 1
+var scaledValue = valueToAnimate / 10;
+// Create a ProgressBar instance
+var bar = new ProgressBar.Circle('.progress-one', {
+  strokeWidth: 5,
+  easing: 'easeInOut',
+  duration: 2000,
+  color: '#FFC107',
+  trailColor: '#191923',
+  trailWidth: 5,
+  easing: 'easeOut',
+  svgStyle: { width: '100%', height: '100%' },
+  text: {
+    value: '0',
+    style: {
+      color: '#8c8c8e',
+      position: 'absolute',
+      top: '50%',
+      left: '50%',
+      transform: 'translate(-50%, -50%)',
+      fontSize: '16px'
+    },
+  },
+  step: (state, bar) => {
+    // Set the progress bar text to the original value (scaledValue * 10)
+    bar.setText((valueToAnimate).toFixed(1));
+  }
 });
-// home-4 progess end
+// Animate the progress bar to the scaled value
+bar.animate(scaledValue);
+
+var valueToAnimate = 6.8;
+// Scale the value to be between 0 and 1
+var scaledValue = valueToAnimate / 10;
+// Create a ProgressBar instance
+var bar = new ProgressBar.Circle('.progress-two', {
+  strokeWidth: 5,
+  easing: 'easeInOut',
+  duration: 2000,
+  color: '#FFC107',
+  trailColor: '#191923',
+  trailWidth: 5,
+  easing: 'easeOut',
+  svgStyle: { width: '100%', height: '100%' },
+  text: {
+    value: '0',
+    style: {
+      color: '#8c8c8e',
+      position: 'absolute',
+      top: '50%',
+      left: '50%',
+      transform: 'translate(-50%, -50%)',
+      fontSize: '16px'
+    },
+  },
+  step: (state, bar) => {
+    // Set the progress bar text to the original value (scaledValue * 10)
+    bar.setText((valueToAnimate).toFixed(1));
+  }
+});
+// Animate the progress bar to the scaled value
+bar.animate(scaledValue);
+
+var valueToAnimate = 6.8;
+// Scale the value to be between 0 and 1
+var scaledValue = valueToAnimate / 10;
+// Create a ProgressBar instance
+var bar = new ProgressBar.Circle('.progress-three', {
+  strokeWidth: 5,
+  easing: 'easeInOut',
+  duration: 2000,
+  color: '#FFC107',
+  trailColor: '#191923',
+  trailWidth: 5,
+  easing: 'easeOut',
+  svgStyle: { width: '100%', height: '100%' },
+  text: {
+    value: '0',
+    style: {
+      color: '#8c8c8e',
+      position: 'absolute',
+      top: '50%',
+      left: '50%',
+      transform: 'translate(-50%, -50%)',
+      fontSize: '16px'
+    },
+  },
+  step: (state, bar) => {
+    // Set the progress bar text to the original value (scaledValue * 10)
+    bar.setText((valueToAnimate).toFixed(1));
+  }
+});
+// Animate the progress bar to the scaled value
+bar.animate(scaledValue);
+
+
+
+
+
+
+
+
+
 });
 

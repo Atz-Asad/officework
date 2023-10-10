@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600&display=swap');
 
 @mixin rv_btn{
     background-color: transparent;
@@ -76,7 +77,9 @@ h1,h2,h3,h4,h5,h6,p{
     padding: 0;
 }
 
-
+body{
+    font-family: 'Mulish', sans-serif;
+}
 
 
 
@@ -657,7 +660,6 @@ h1,h2,h3,h4,h5,h6,p{
 }
 
 
-
 // HOME-4 BANNER SECTION
 .rv_4_banner_main_area{
    
@@ -700,42 +702,6 @@ h1,h2,h3,h4,h5,h6,p{
             .rv_4_banner_content_btn{
                 @include rv_btn;   
             }
-
-            // progress css start
-            .progress{
-                width: 50px;
-                height: 50px;
-            }
-            .progress .track, .progress .fill{
-                fill: rgba(184, 224, 5, 0);
-                stroke-width: 3;
-                transform: rotate(90deg)translate(0px, -80px);
-            }
-            .progress .track{
-                stroke: #2A2A2A;
-            }
-            .progress .fill {
-                stroke: red;
-                stroke-dasharray: 219.99078369140625;
-                stroke-dashoffset: -219.99078369140625;
-                transition: stroke-dashoffset 1s;
-            }
-            
-            .progress.green .fill {
-                stroke: #1B9F17;
-            }
-            .progress .value, .progress{
-                fill: #FFFFFF;
-                text-anchor: middle;
-                font-size: 26px;
-            }
-            .progress, .progress-stacked{
-                --bs-progress-bg: none;
-            }
-            
-            // progress css end
-           
-            
         }     
         .rv_4_banner_slider_next {
             position: absolute;
@@ -777,18 +743,105 @@ h1,h2,h3,h4,h5,h6,p{
             height: 150px;                            
         }
     } 
+    .progress-one , .progress-two, .progress-three 
+    {
+    width: 100px;
+    height: 100px;
+    }
+    .progress{
+        display: none;
+    }
+    .progressbar-text {
+        font-size: 30px !important;
+    }
 }
-
-
-
-
-// #wrapper{
-// 	position: relative;
-// 	top: 80px;
-// 	width: 404px;
-// }
-
-
-/*===== The CSS =====*/
-
-  
+// HOME-4 ABOUT SECTION
+.rv_4_about_main_area{
+    padding: 100px 0;
+    position: relative;
+    .rv_4_car_img{
+        position: absolute;
+        right: 2%;
+        bottom: 10%;
+    }
+    .rv_4_about_image{
+        position: relative;
+        img{
+            height: 650px;
+            width: 550px;
+            -o-object-fit: contain;
+            object-fit: contain;
+        }
+        img:nth-child(2){        
+            position: absolute;
+            content: "";
+            width: 250px;
+            height: 300px;
+            bottom: 60px;
+            right: 12%;
+            -o-object-fit: contain;
+            object-fit: contain;
+        }
+    }
+    .rv_4_about_content{      
+        .rv_4_about_content_heading{
+            color: #142137;
+            font-size: 48px;
+            font-weight: 800;
+            position: relative;
+            padding-bottom: 30px;
+            span{
+                position: absolute;
+                right: 23%;
+                top: 50px;
+                z-index: -1;
+            }
+        }
+        .rv_4_about_content_desc{
+            color: rgba(20,33,55, 0.8);
+            font-size: 18px;
+            font-weight: 500;
+            padding-bottom: 30px;
+        } 
+        .rv_4_about_list_item{
+            padding-bottom: 40px;
+            display: flex;
+            column-gap: 20px;
+            .rv_4_about_list_number > span{             
+                height: 50px;
+                width: 50px;
+                border-radius: 50%;
+                background: #C6C8D4;
+                color: #142137;
+                text-align: center;
+                line-height: 50px;
+                font-size: 18px;
+                font-weight: 700;
+                
+            }
+            .rv_4_about_list_content{
+                h4{
+                    color: #142137;
+                    font-size: 20px;
+                    font-weight: 700;
+                    transition: 0.3s;
+                    cursor: pointer;
+                    padding-bottom: 10px;
+                    &:hover{
+                        color: #1C74E9;
+                    }
+                }
+                p{
+                    color: rgba(20,33,55, 0.7);
+                    font-weight: 500;
+                    font-size: 16px
+                }
+            }
+            
+        }  
+        .rv_4_about_btn{
+            @include rv_btn;
+            color: #142137;
+        }           
+    }
+}
